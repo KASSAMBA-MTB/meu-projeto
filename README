@@ -4,7 +4,7 @@
 
 Este projeto tem como objetivo aplicar técnicas de **Aprendizado de Máquina Supervisionado** para classificar a aceitabilidade de veículos com base em diferentes atributos.
 
-O modelo foi desenvolvido utilizando o algoritmo **Decision Tree Classifier**, disponível na biblioteca *scikit-learn*.
+O modelo foi desenvolvido utilizando o algoritmo **Decision Tree Classifier**, da biblioteca *scikit-learn*.
 
 ---
 
@@ -21,7 +21,7 @@ O modelo foi desenvolvido utilizando o algoritmo **Decision Tree Classifier**, d
 ## 📊 Base de Dados
 
 * Dataset: Avaliação de carros
-* Fonte: GitHub público
+* Fonte: Repositório público no GitHub
 * Atributos utilizados:
 
   * Preço
@@ -35,14 +35,14 @@ O modelo foi desenvolvido utilizando o algoritmo **Decision Tree Classifier**, d
 
 ## ⚙️ Pré-processamento
 
-Os dados categóricos foram transformados em valores numéricos para possibilitar a aplicação do modelo.
+Os dados categóricos foram convertidos para valores numéricos para permitir o treinamento do modelo.
 
-Exemplo:
+Exemplo de transformação:
 
-* "baixo" → 0
-* "medio" → 1
-* "alto" → 2
-* "muitoalto" → 3
+* baixo → 0
+* medio → 1
+* alto → 2
+* muitoalto → 3
 
 ---
 
@@ -50,7 +50,7 @@ Exemplo:
 
 * Treinamento: 90%
 * Teste: 10%
-* Método: train_test_split
+* Método: `train_test_split`
 
 ---
 
@@ -61,17 +61,25 @@ Exemplo:
 
 ---
 
+## 🌳 Visualização da Árvore de Decisão
+
+> ⚠️ Observação: a imagem abaixo representa a estrutura completa da árvore gerada pelo modelo.
+
+![Árvore de Decisão](Arvore.png)
+
+---
+
 ## 📈 Resultados
 
 ### 🔹 Exemplos de Predição
 
 Entrada:
 [0, 0, 5, 5, 2, 2]
-Saída: muitobom
+Saída: **muitobom**
 
 Entrada:
 [0, 0, 5, 5, 2, 0]
-Saída: inaceitavel
+Saída: **inaceitavel**
 
 ---
 
@@ -85,15 +93,18 @@ Saída: inaceitavel
 
 Apesar da alta acurácia, é importante considerar:
 
-* O dataset é relativamente simples
-* Pode haver indícios de overfitting
-* Não foi aplicada validação cruzada
+* O dataset possui estrutura relativamente simples
+* Possível ocorrência de overfitting
+* Não foi utilizada validação cruzada
 
-### 🔍 Melhorias futuras:
+### 🔍 Melhorias Futuras:
 
-* Aplicar K-Fold Cross Validation
-* Testar outros algoritmos (KNN, Random Forest)
-* Ajustar hiperparâmetros
+* Aplicar **K-Fold Cross Validation**
+* Testar outros algoritmos:
+
+  * Random Forest
+  * K-Nearest Neighbors (KNN)
+* Ajustar hiperparâmetros do modelo
 
 ---
 
@@ -103,7 +114,7 @@ Apesar da alta acurácia, é importante considerar:
 ├── notebook.ipynb
 ├── script.py
 ├── README.md
-└── arvore_decisao.png
+└── Arvore.png
 ```
 
 ---
@@ -116,4 +127,6 @@ Walter Junio Pontes Teixeira
 
 ## 📌 Considerações Finais
 
-O modelo apresentou excelente desempenho, demonstrando a eficácia das Árvores de Decisão para problemas de classificação com dados estruturados.
+O modelo apresentou excelente desempenho na tarefa de classificação, demonstrando a eficácia das Árvores de Decisão em problemas com dados estruturados.
+
+Este projeto reforça a importância do pré-processamento e da escolha adequada do algoritmo para obtenção de bons resultados em Aprendizado de Máquina.
