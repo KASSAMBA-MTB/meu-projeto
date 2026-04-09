@@ -1,0 +1,119 @@
+# 🚗 Classificação de Aceitabilidade de Carros com Árvore de Decisão
+
+## 📌 Descrição do Projeto
+
+Este projeto tem como objetivo aplicar técnicas de **Aprendizado de Máquina Supervisionado** para classificar a aceitabilidade de veículos com base em diferentes atributos.
+
+O modelo foi desenvolvido utilizando o algoritmo **Decision Tree Classifier**, disponível na biblioteca *scikit-learn*.
+
+---
+
+## 🧠 Tecnologias Utilizadas
+
+* Python
+* Pandas
+* Matplotlib
+* Scikit-learn
+* Google Colab
+
+---
+
+## 📊 Base de Dados
+
+* Dataset: Avaliação de carros
+* Fonte: GitHub público
+* Atributos utilizados:
+
+  * Preço
+  * Manutenção
+  * Número de portas
+  * Capacidade de pessoas
+  * Bagageiro
+  * Segurança
+
+---
+
+## ⚙️ Pré-processamento
+
+Os dados categóricos foram transformados em valores numéricos para possibilitar a aplicação do modelo.
+
+Exemplo:
+
+* "baixo" → 0
+* "medio" → 1
+* "alto" → 2
+* "muitoalto" → 3
+
+---
+
+## 🔀 Divisão dos Dados
+
+* Treinamento: 90%
+* Teste: 10%
+* Método: train_test_split
+
+---
+
+## 🌳 Modelo de Machine Learning
+
+* Algoritmo: Árvore de Decisão
+* Biblioteca: scikit-learn
+
+---
+
+## 📈 Resultados
+
+### 🔹 Exemplos de Predição
+
+Entrada:
+[0, 0, 5, 5, 2, 2]
+Saída: muitobom
+
+Entrada:
+[0, 0, 5, 5, 2, 0]
+Saída: inaceitavel
+
+---
+
+### 🎯 Acurácia do Modelo
+
+**98,3%**
+
+---
+
+## 📉 Análise Crítica
+
+Apesar da alta acurácia, é importante considerar:
+
+* O dataset é relativamente simples
+* Pode haver indícios de overfitting
+* Não foi aplicada validação cruzada
+
+### 🔍 Melhorias futuras:
+
+* Aplicar K-Fold Cross Validation
+* Testar outros algoritmos (KNN, Random Forest)
+* Ajustar hiperparâmetros
+
+---
+
+## 📁 Estrutura do Projeto
+
+```
+├── notebook.ipynb
+├── script.py
+├── README.md
+└── arvore_decisao.png
+```
+
+---
+
+## 👨‍💻 Autor
+
+Walter Junio Pontes Teixeira
+
+---
+
+## 📌 Considerações Finais
+
+O modelo apresentou excelente desempenho, demonstrando a eficácia das Árvores de Decisão para problemas de classificação com dados estruturados.
